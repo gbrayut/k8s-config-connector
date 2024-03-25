@@ -22,6 +22,10 @@ func init() {
 		//    min_master_version must be set to equivalent values on create
 		SkipDriftDetection: true,
 	}
+	resourceContextMap["containerclusterwithcgroupv1"] = ResourceContext{
+		ResourceKind: "ContainerCluster",
+		SkipUpdate:   true,
+	}
 	resourceContextMap["removedefaultnodepool"] = ResourceContext{
 		ResourceKind: "ContainerCluster",
 		// TestCreateNoChangeUpdateDelete/directives-removedefaultnodepool: dynamic_controller_integration_test.go:239:
